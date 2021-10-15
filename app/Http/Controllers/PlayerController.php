@@ -7,6 +7,7 @@ use App\Player;
 
 class PlayerController extends Controller
 {
+
     public function show(Player $player)
     {
         //  $player->load(['team']);
