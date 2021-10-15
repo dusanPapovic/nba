@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    @include('shared.navbar')
     <div class="container">
         @yield('content')
     </div>
