@@ -12,4 +12,9 @@ class Team extends Model
     {
         return $this->hasMany(Player::class); // svi modeli su dostupni u bilo kom modelu i ne mora da se inportuje(use)
     }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class); // svi modeli su dostupni u bilo kom modelu i ne mora da se inportuje(use)
+    }
 }
