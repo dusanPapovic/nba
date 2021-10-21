@@ -1,20 +1,24 @@
+
 @extends('layouts.app')
 
-@section('title','New')
+@section('title','News News')
 
 @section('content')
-<h5>
+<h2>
     {{$news->title}}
-</h5>
+</h2>
 <p>
     {{$news->content}}
 </p>
-
-<p>
-    {{$news->user->name}}
-</p>
-<p>
+ <p>
     {{$news->user->email}}
-</p>
+</p>  
+<h5>Teams</h5>
+@foreach ($news->teams as $team)
 
-@endsection
+        {{$team->name}}
+</br>
+
+@endforeach
+
+@endsection 

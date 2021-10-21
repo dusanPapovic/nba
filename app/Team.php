@@ -17,4 +17,10 @@ class Team extends Model
     {
         return $this->hasMany(Comment::class); // svi modeli su dostupni u bilo kom modelu i ne mora da se inportuje(use)
     }
+
+    public function news()
+    {
+        return $this->belongsToMany(News::class, 'news_teams');
+    }
+
 }

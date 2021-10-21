@@ -10,6 +10,7 @@
             {{ $new->title }}
         </a> -  {{$new->user->name}}
     </li>
+    
     @endforeach
 </ul>
 {{ $news->links() }}
