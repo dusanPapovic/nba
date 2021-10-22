@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateCommentRequest extends FormRequest
+class CreateNewsRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,10 @@ class CreateCommentRequest extends FormRequest
     public function rules()
     {
         return [
+            'title' => 'required|string|max:255|unique:news',
             'content' => 'required|string|max:1000',
+            'teams' => 'required|array',
+            'teams.*' => 'integer|exists:teams,id'
         ];
     }
 }

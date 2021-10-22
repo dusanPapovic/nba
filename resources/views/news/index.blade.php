@@ -2,6 +2,10 @@
 
 @section('title','News')
 @section('content')
+
+<p>
+         {{ session('status', '') }}
+        </p>
 <h1>News</h1>
 <ul>
     @foreach($news as $new)
@@ -10,7 +14,7 @@
             {{ $new->title }}
         </a> -  {{$new->user->name}}
     </li>
-    
+
     @endforeach
 </ul>
 {{ $news->links() }}

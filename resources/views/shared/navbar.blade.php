@@ -6,6 +6,9 @@
         <a class="navbar-brand" href="/news">
             News
         </a>
+        <a class="navbar-brand" href="/create/news">
+            Create News
+        </a>
         @auth
         <div>
             {{auth()->user()->name}}

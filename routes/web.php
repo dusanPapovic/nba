@@ -29,7 +29,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/news', [NewsController::class, 'index']);
     Route::get('/news/{news}', [NewsController::class, 'show'])->name('news');
     Route::get('/news/team/{teamName}', [NewsController::class, 'newsTeam']);
-    //voditi racuna oko ruta
+    Route::get('/create/news', [NewsController::class, 'create']);
+    Route::post('/create/news', [NewsController::class, 'store']);
 });
 
 Route::group(['middleware' => 'guest'], function () {
